@@ -28,6 +28,8 @@ namespace AppVectores
             Console.WriteLine("la Nota 5 equivale a{0}",Calificacion(5));
 
             vectorinicializar();
+            vectortarea();
+
             Console.ReadKey();
      
         }
@@ -102,5 +104,31 @@ namespace AppVectores
             //Console.WriteLine("Promedio del Vector  {0}", contador);
 
         }
+       public static void vectortarea()
+        {
+            int num,mayor=0;
+            int[] x = new int[10];
+
+            for(int i = 0; i < 3; i++)
+            {
+                do
+                {
+                Console.WriteLine("\nIngrese el Numero");
+                num = int.Parse(Console.ReadLine());
+                    x[i] = num;
+
+               } while (num < 0 || num > 1001);
+            if(mayor<x[i])
+               {
+                    mayor = x[i];
+
+                }
+          }
+
+          Console.WriteLine("El Numero mayor es {0} ", mayor);
+
+
+        }
+
     }
 }
