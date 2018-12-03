@@ -25,7 +25,9 @@ namespace AppVectores
 
             }
             Console.WriteLine("2 Elevado a la 5 {0}", ExponenteFor(2,5));
-            Console.WriteLine("la tota 5 equivale a{0}",Calificacion(5));
+            Console.WriteLine("la Nota 5 equivale a{0}",Calificacion(5));
+
+            vectorinicializar();
             Console.ReadKey();
      
         }
@@ -67,7 +69,38 @@ namespace AppVectores
                 return "Fuera de Rango";
 
         }
+        public static void vectorinicializar()
+        {
 
+            int[] x = new int[8];
+            x[0] = 10;
+            x[1] = 2;
+            x[2] = 20;
+            x[3] = 8;
+            x[4] = 15;
+            x[5] = 1;
+            x[6] = -9;
+            x[7] = 14;
+            //x[8] = 10;
+            //x[9] = 10;
+            int suma = 0,contador=0;
+            double promedio;
 
+            //imprimir vector
+            Console.WriteLine("\nELEMENTOS DEL VECTOR \n====================\n");
+            for (int i = 0; i < x.Length; i++)
+            {
+                suma = suma + x[i];
+              
+                //contador = contador+1;
+                Console.WriteLine("Elemento Indice {0}--> {1}", (i + 1), x[i]); 
+                
+            }
+            promedio = (double)suma / x.Length;
+            Console.WriteLine("Total de la Suma de los elementos del Vector  {0}",suma);
+            Console.WriteLine("Promedio del Vector  {0}", promedio);
+            //Console.WriteLine("Promedio del Vector  {0}", contador);
+
+        }
     }
 }
