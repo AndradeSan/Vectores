@@ -106,10 +106,10 @@ namespace AppVectores
         }
        public static void vectortarea()
         {
-            int num,mayor=0;
+            int num,mayor=0,menor=900000000;
             int[] x = new int[10];
 
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < 10; i++)
             {
                 do
                 {
@@ -118,15 +118,19 @@ namespace AppVectores
                     x[i] = num;
 
                } while (num < 0 || num > 1001);
-            if(mayor<x[i])
+            if(mayor<=x[i])
                {
                     mayor = x[i];
 
-                }
+                };
+                if (menor >= x[i])
+                {
+                    menor = x[i];
+                };
           }
 
           Console.WriteLine("El Numero mayor es {0} ", mayor);
-
+            Console.WriteLine("El Numero menor es {0} ", menor);
 
         }
 
